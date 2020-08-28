@@ -1,4 +1,4 @@
-class DrawImage extends Snapshot{
+class DrawImage extends Poster{
     constructor () {
         super()
     }

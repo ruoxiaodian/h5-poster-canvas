@@ -2,7 +2,7 @@
 * 海报快照
 * */
 
-class Snapshot {
+class Poster {
     constructor (width, height) {
         const canvas = document.getElementById("canvas2"); //canvas实例
         const pixelRatio = window.devicePixelRatio;
