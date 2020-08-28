@@ -4,7 +4,7 @@
 
 class Poster {
     constructor (width, height) {
-        const canvas = document.getElementById("canvas2"); //canvas实例
+        const canvas = document.getElementById("canvas"); //canvas实例
         const pixelRatio = window.devicePixelRatio;
         let boxWidth = width || window.innerWidth;
         let boxHeight = height || window.innerHeight;
