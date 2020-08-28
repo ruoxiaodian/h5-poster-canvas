@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>canvas</title>
+</head>
+<body style="padding: 0; margin: 0">
+<canvas id="canvas2" style="display:block; padding: 0; margin: 0 auto;">
+    您的浏览器不支持该功能，请升级
+</canvas>
+<!--<div style="width: 300px; height: 300px; position: relative; border: 1px solid #ebebeb">-->
+<!--<div style="position: absolute; left: 100px; right: 100px;  width: 90px; height: 90px; border: 10px solid #ebebeb; padding-left: 10px"></div>-->
+<!--</div>-->
+
+<script src="Snapshot.js"></script>
+<script src="DrawImage.js"></script>
+<script>
+    (async function () {
+        try {
+            let instance = new Snapshot();
+            let drawData = [{
+                name: "block",
+                left: 0,
+                top: 0,
+                width: instance.canvas.width,
+                height: instance.canvas.height,
+                backgroundColor: "#57bd6a",
+                linearGradient: "0, 0, 0, 1000",
+                gradientStops: [[0, "#57bd6a"], [0.5, "#57bd6a"], [1, "#57bdb5"]]
+            }, {
+                name: "text",
+                left: 0,
+                top: 0,
+                text: "寻物启事",
+                fontColor: "#57bd6a",
+                fontSize: 40,
+                fontWeight: "bold",
+                lineHeight: 120,
+                borderWidth: 10,
+                borderColor: "#fff",
+                textAlign: "center"
+            }, {
+                name: "image",
+                src: "./images/share.png",
+                left: 20,
+                width: instance.canvas.width - 70,
+                height: 500,
+                mode: "aspectFill",
+                borderWidth: 15,
+                borderColor: "rgba(255, 255, 255, 0.1)",
+                topFollow: true
+            }, {
+                name: "text",
+                left: 30,
+                top: 20,
+                text: "适当好好安徽省都hi哦扫我好滴哦哈 我哦爱好死哦对吼以后爱好爱好死哦和哦哈我爱好死哦和迪欧好好",
+                width: instance.canvas.width - 60,
+                fontColor: "#fff",
+                fontSize: 28,
+                lineHeight: 40,
+                textAlign: "center",
+                topFollow: true
+            }, {
+                name: "block",
+                left: 100,
+                top: 20,
+                width: instance.canvas.width - 200,
+                height: 50,
+                borderWidth: 4,
+                borderColor: "#fff",
+                borderRadius: 10,
+                topFollow: true
+            }, {
+                name: "text",
+                left: 0,
+                top: -50,
+                text: "联系方式: 13770962386",
+                fontColor: "#fff",
+                fontSize: 32,
+                fontWeight: "bold",
+                lineHeight: 32,
+                textAlign: "center",
+                topFollow: true
+            }, {
+                name: "block",
+                left: 0,
+                top: 60,
+                width: instance.canvas.width,
+                height: instance.canvas.height,
+                backgroundColor: "#fff",
+                linearGradient: "0, 0, 0, 400",
+                gradientStops: [[0, "#fff"], [1, "rgba(255, 255, 255, 0.8)"]],
+                borderRadius: 60,
+                topFollow: true
+            }, {
+                name: "text",
+                left: 30,
+                bottom: 160,
+                text: "寻丢还拾、善小为之",
+                fontColor: "#57bd6a",
+                fontSize: 28,
+                fontWeight: "bold",
+                lineHeight: 32,
+                textAlign: "left",
+            }, {
+                name: "text",
+                left: 30,
+                bottom: 120,
+                width: instance.canvas.width - 250,
+                text: "寻物启事、拾物认领；来【寻丢还拾】小程序",
+                fontColor: "#999",
+                fontSize: 24,
+                lineHeight: 32,
+                textAlign: "left",
+            }, {
+                name: "image",
+                src: "./images/xcx.jpg",
+                right: 30,
+                bottom: 20,
+                width: 150,
+                height: 150,
+                mode: "aspectFill",
+                borderWidth: 10,
+                borderColor: "#fff",
+                borderRadius: 200,
+            }]
+            let res = {};
+            for (let i = 0; i < drawData.length; i ++) {
+                let data = drawData[i];
+                if (data.topFollow) {
+                    data.top = (res.top || 0) + (data.top || 0)
+                }
+                if (data.leftFollow) {
+                    data.left = (res.left || 0) + (data.left || 0)
+                }
+                res = await instance.draw(data);
+            }
+        } catch (e) {
+            console.log(e.message)
+        }
+    })()
+
+</script>
+</body>
+</html>
