@@ -5,6 +5,10 @@ h5 海报生成器
 在canvas中元素之间距离都是坐标系间的关系；假定每个元素都是block且position:absolute; 那么left、top、right、bottom这些位置字段跟css中的思路就很接近了；
 相对复杂的属性比如投影、渐变参考的是canvas原生写法；详见 [canvas 原生写法](https://airingursb.gitbooks.io/canvas/content/07.html)
 
+## 效果参考
+<img width="300" src="https://github.com/ruoxiaodian/h5-poster-canvas/images/demo.png"></img>
+
+
 ### name: image配置
 
 | 字段名           | 类型              | 必填  | 描述                                    |
