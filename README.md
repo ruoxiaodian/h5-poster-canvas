@@ -1,15 +1,19 @@
 # h5-poster-canvas
-h5 海报生成器1
+h5 海报生成器
+
+## 概述
+在canvas中元素之间距离都是坐标系间的关系；假定每个元素都是position:absolute; 那么left、top、right、bottom这些位置字段跟css中的思路就很接近了；
+相对复杂的属性比如投影、渐变参考的是canvas原生写法；详见 [canvas 原生写法](https://airingursb.gitbooks.io/canvas/content/07.html)
 
 ### name: image配置
 
 | 字段名          | 类型             | 必填 | 描述                                   |
 | --------------- | ---------------- | ---- | -------------------------------------- |
 | src               | String | 是   | 图片地址                               |
-| left               | Number(单位:px) | 是   | 图片离画布左边距离                             |
-| top               | Number(单位:px) | 是   | 图片离画布底部距离                               |
-| right               | Number(单位:px) | 是   | 图片画布右边距离                             |
-| bottom               | Number(单位:px) | 是   | 图片离画布底部距离                              |
+| left               | Number(单位:px) | 否   | 图片离画布左边距离                             |
+| top               | Number(单位:px) | 否   | 图片离画布底部距离                               |
+| right               | Number(单位:px) | 否   | 图片画布右边距离 left存在则right无效                           |
+| bottom               | Number(单位:px) | 否   | 图片离画布底部距离 top存在 则bottom无效                            |
 | width           | Number(单位:px) | 是   | 图片宽度 |
 | height          | Number(单位:px) | 是   | 图片高度                                       |
 | borderRadius    | Number(单位:px) | 否   | 圆角                                   |
