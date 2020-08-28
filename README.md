@@ -85,6 +85,7 @@ h5 海报生成器
 | backgroundColor | String           | 否   | 背景色 |
 | backgroundImage | String           | 否   | 背景图片路径 |
 | backgroundRepeat| String           | 否   | 背景图片覆盖方式 默认no-repeat |
+| hollowWidth     | Int              | 否   | 镂空尺寸 |
 | shadowColor     | String           | 否   | 投影颜色 |
 | shadowOffsetX   | Number           | 否   | X轴偏移 依赖shadowColor是否有值 |
 | shadowOffsetY   | Number           | 否   | Y轴偏移 依赖shadowColor是否有值 |
@@ -133,6 +134,7 @@ h5 海报生成器
 | bottom          | Number(单位:px)   | 否   | 离画布底部距离 top存在 则bottom无效 |
 | radius          | Number(单位:px)   | 是   | 半径 半径大小 |
 | num             | Int              | 是   | 边数 多边形边数 默认3 |
+| rotate          | Int              | 否   | 旋转角度 |
 | borderWidth     | Number(单位:px)   | 否   | 边框宽度 |
 | borderColor     | String           | 否   | 边框颜色 |
 | backgroundColor | String           | 否   | 背景色 |
