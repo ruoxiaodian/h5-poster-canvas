@@ -6,7 +6,7 @@ h5 海报生成器
 相对复杂的属性比如投影、渐变参考的是canvas原生写法；详见 [canvas 原生写法](https://airingursb.gitbooks.io/canvas/content/07.html)
 
 ## 效果参考
-<img width="300" src="https://github.com/ruoxiaodian/h5-poster-canvas/images/demo.png"></img>
+<img width="300" src="https://github.com/ruoxiaodian/h5-poster-canvas/blob/master/images/demo.png"></img>
 
 
 ### name: image配置
