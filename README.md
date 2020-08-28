@@ -46,6 +46,7 @@ h5 海报生成器
 | fontStyle       | String           | 否   | 文本样式 默认normal|
 | fontFamily      | String           | 否   | 字体 |
 | textAlign       | String           | 否   | 对齐方式 默认left|
+| lineHeight      | Int              | 否   | 字体行高 默认20 |
 | lineNum         | Int              | 否   | 文本内容显示行数限制 |
 | borderWidth     | Number(单位:px)   | 否   | 描边宽度 |
 | borderColor     | String           | 否   | 描边颜色 |
