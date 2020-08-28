@@ -11,8 +11,6 @@ $RECYCLE.BIN/
 .Trashes
 .idea
 .idea/
-DrawImage.js
-test.js
 
 # Node.js
 node_modules/
